@@ -1,0 +1,342 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #f5efe7;
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .vintage-card {
+    @apply bg-white rounded-[10px];
+    border: 3px solid #213553;
+    box-shadow: 8px 8px 0px #213553;
+  }
+  
+  .vintage-button {
+    @apply bg-blue-500 text-white font-bold rounded-[10px];
+    @apply hover:bg-blue-600 transition-all duration-150;
+    @apply transform hover:-translate-x-1 hover:-translate-y-1;
+    border: 3px solid #213553;
+    box-shadow: 4px 4px 0px #213553;
+  }
+  
+  .vintage-button:hover {
+    box-shadow: 6px 6px 0px #213553;
+  }
+  
+  .vintage-button-secondary {
+    @apply bg-stone-500 text-white font-bold rounded-[10px];
+    @apply hover:bg-stone-600 transition-all duration-150;
+    @apply transform hover:-translate-x-1 hover:-translate-y-1;
+    border: 3px solid #213553;
+    box-shadow: 4px 4px 0px #213553;
+  }
+  
+  .vintage-button-secondary:hover {
+    box-shadow: 6px 6px 0px #213553;
+  }
+  
+  .vintage-input {
+    @apply bg-white rounded-[10px];
+    border: 3px solid #213553;
+    @apply focus:border-blue-600 focus:outline-none;
+    @apply placeholder-stone-600 text-stone-900;
+    box-shadow: 4px 4px 0px #213553;
+  }
+  
+  .vintage-input:focus {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px #213553;
+  }
+  
+  .vintage-text-primary {
+    @apply text-slate-900;
+  }
+  
+  .vintage-text-secondary {
+    @apply text-slate-700;
+  }
+  
+  .vintage-text-muted {
+    @apply text-slate-600;
+  }
+  
+  .vintage-text-accent {
+    color: #355379;
+  }
+  
+  .vintage-bg-primary {
+    background: #f5efe7;
+  }
+  
+  .vintage-bg-accent {
+    background: #355379;
+    border: 3px solid #213553;
+    box-shadow: 4px 4px 0px #213553;
+  }
+  
+  .vintage-pattern {
+    /* Remove pattern for clean neubrutalism look */
+  }
+  
+  .vintage-border {
+    border: 3px solid #213553;
+  }
+  
+  .vintage-shadow {
+    box-shadow: 8px 8px 0px #213553;
+  }
+  
+  .vintage-glow {
+    /* Remove glow for neubrutalism */
+  }
+  
+  .poster-style {
+    background: #f5efe7;
+    border: 3px solid #213553;
+    box-shadow: 8px 8px 0px #213553;
+  }
+  
+  .japanese-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  
+  .retro-accent {
+    color: #355379;
+    font-weight: 900;
+  }
+
+  .auth-card {
+    background: white;
+    border: 3px solid #213553;
+    box-shadow: 12px 12px 0px #213553;
+    border-radius: 10px;
+  }
+
+  .auth-button {
+    background: #355379;
+    @apply text-white font-bold py-3 px-6 rounded-[10px] transition-all duration-150;
+    @apply transform hover:-translate-x-1 hover:-translate-y-1;
+    border: 3px solid #213553;
+    box-shadow: 4px 4px 0px #213553;
+  }
+
+  .auth-button:hover {
+    background: #213553;
+    box-shadow: 6px 6px 0px #213553;
+  }
+
+  .auth-input {
+    @apply bg-white rounded-[10px];
+    border: 3px solid #213553;
+    @apply focus:border-blue-600 focus:outline-none;
+    @apply placeholder-slate-600 text-slate-900;
+    box-shadow: 4px 4px 0px #213553;
+  }
+
+  .auth-input:focus {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px #213553;
+  }
+
+  /* Neubrutalism button styles */
+  .neo-button {
+    @apply font-bold transition-all duration-150 rounded-[10px];
+    @apply transform hover:-translate-x-1 hover:-translate-y-1;
+    border: 3px solid #213553;
+    box-shadow: 4px 4px 0px #213553;
+  }
+
+  .neo-button:hover {
+    box-shadow: 6px 6px 0px #213553;
+  }
+
+  .neo-button-green {
+    @apply bg-green-500 text-white;
+  }
+
+  .neo-button-green:hover {
+    @apply bg-green-600;
+  }
+
+  .neo-button-purple {
+    @apply bg-purple-500 text-white;
+  }
+
+  .neo-button-purple:hover {
+    @apply bg-purple-600;
+  }
+
+  .neo-button-yellow {
+    @apply bg-yellow-400 text-black;
+  }
+
+  .neo-button-yellow:hover {
+    @apply bg-yellow-500;
+  }
+
+  .neo-button-red {
+    @apply bg-red-500 text-white;
+  }
+
+  .neo-button-red:hover {
+    @apply bg-red-600;
+  }
+
+  /* Mobile optimizations */
+  @media (max-width: 768px) {
+    .vintage-card {
+      box-shadow: 4px 4px 0px #213553;
+    }
+    
+    .vintage-button {
+      box-shadow: 3px 3px 0px #213553;
+    }
+    
+    .vintage-button:hover {
+      box-shadow: 4px 4px 0px #213553;
+    }
+    
+    .vintage-input {
+      box-shadow: 3px 3px 0px #213553;
+    }
+    
+    .vintage-input:focus {
+      transform: translate(-1px, -1px);
+      box-shadow: 4px 4px 0px #213553;
+    }
+    
+    .neo-button {
+      box-shadow: 3px 3px 0px #213553;
+    }
+    
+    .neo-button:hover {
+      box-shadow: 4px 4px 0px #213553;
+    }
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5efe7;
+  border: 2px solid #213553;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #355379;
+  border: 2px solid #213553;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #213553;
+}
+
+/* Remove vintage paper texture effect */
+.paper-texture {
+  position: relative;
+}
+
+/* Animation for neubrutalism feel */
+@keyframes vintage-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.vintage-pulse {
+  animation: vintage-pulse 2s ease-in-out infinite;
+}
+
+/* Neubrutalism button hover effects */
+.retro-hover {
+  position: relative;
+  overflow: visible;
+}
+
+/* Remove flag animations for cleaner look */
+.flag-wave {
+  /* Remove animation */
+}
+
+/* Login form animations */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-in-up {
+  animation: slideInUp 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Neubrutalism specific styles */
+.neo-card {
+  background: white;
+  border: 3px solid #213553;
+  box-shadow: 8px 8px 0px #213553;
+  border-radius: 10px;
+}
+
+.neo-input {
+  background: white;
+  border: 3px solid #213553;
+  box-shadow: 4px 4px 0px #213553;
+  transition: all 0.15s ease;
+  border-radius: 10px;
+}
+
+.neo-input:focus {
+  outline: none;
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #213553;
+}
+
+.neo-modal {
+  background: white;
+  border: 4px solid #213553;
+  box-shadow: 16px 16px 0px #213553;
+  border-radius: 10px;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 640px) {
+  .vintage-shadow {
+    box-shadow: 4px 4px 0px #213553;
+  }
+  
+  .auth-card {
+    box-shadow: 6px 6px 0px #213553;
+  }
+  
+  .neo-modal {
+    box-shadow: 8px 8px 0px #213553;
+  }
+}
